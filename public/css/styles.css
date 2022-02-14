@@ -9,8 +9,11 @@
     border-radius: 0;
     margin-bottom: 0;
     font-size: 12px;
+    
     letter-spacing: 5px;
+    background-color: whitesmoke;
 }
+
 .navbar-nav  li a:hover {
     color: #1abc9c !important;
 }

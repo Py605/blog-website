@@ -1,13 +1,21 @@
-//jshint esversion:6
 
 const express = require("express");
 const _ = require("lodash");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-
-const homeStartingContent ="Hey Guys & Girls, This is my First Blog Website. Even though i haven't host it on any Good Server, But Still you can import this project into your System and then you have to run app.js file through your cmd then just go to your Browser's Home Page and Search localhost:3000 <br> You can add your Blogs by searching localhost:3000/compose in the Search Bar...Have a Good Day!!";
-const aboutContent = "This is the version 1.0 of my Blog-Website, you can add your thoughts too in the form of a Blog. This will have more features in future... So, Till then enjoy this version...";
+const mongoose = require("mongoose");
+const homeStartingContent ="Hey Guys & Girls, This is my First Blog Website. You can also make a new Post by going on :- localhost:4000/compose in the Search Bar...Have a Good Day!!";
+const aboutContent = "This is the version 2.0 of my Blog-Website, you can add your thoughts too in the form of a Blog. This will have more features in future... So, Till then enjoy this version...";
 const contactContent = "Mail id:- pryanshubharti9412@gmail.com";
+
+mongoose.connect("mongodb+srv://admin-py:pypriyanshu@cluster0.x67qb.mongodb.net/blogwebsiteDB",{useNewUrlParser : true});
+
+const postSchema ={
+  title : String,
+  content : String
+};
+
+const Post = mongoose.model('Post',postSchema);
 
 let posts = [];
 const app = express();
@@ -43,11 +51,18 @@ app.get('/compose', function(req,res){
 })
 
 app.post('/compose', function(req,res){
-  const post = {
+  const post = new Post({
     title: req.body.postTitle,
     content: req.body.post
-  };
+  });
   posts.push(post);
+
+  post.save();
+
+
+  // Post.find({}, function(err, foundItems){
+  //   console.log(foundItems);
+  // });
 
   res.redirect('/');
 })
@@ -69,6 +84,6 @@ posts.forEach(function(post)
   });
 });
 
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
+app.listen(4000, function() {
+  console.log("Server started on port 4000");
 });

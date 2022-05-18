@@ -4,11 +4,11 @@ const _ = require("lodash");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-const homeStartingContent ="Hey Guys & Girls, This is my First Blog Website. You can also make a new Post by going on :- localhost:4000/compose in the Search Bar...Have a Good Day!!";
+const homeStartingContent ="Hey Guys & Girls, This is my First Blog Website. You can also make a new Post by going on Compose Post";
 const aboutContent = "This is the version 2.0 of my Blog-Website, you can add your thoughts too in the form of a Blog. This will have more features in future... So, Till then enjoy this version...";
 const contactContent = "Mail id:- pryanshubharti9412@gmail.com";
 
-mongoose.connect("mongodb://localhost:27017/blogwebsiteDB",{useNewUrlParser : true});
+mongoose.connect("mongodb+srv://admin-py:pypriyanshu@cluster0.x67qb.mongodb.net/blogwebsiteDB",{useNewUrlParser : true});
 
 const postSchema ={
   title : String,
@@ -83,7 +83,10 @@ posts.forEach(function(post)
     }
   });
 });
-
-app.listen(4000, function() {
-  console.log("Server started on port 4000");
+let port = process.env.PORT;
+if(port == null || port == ""){
+  port = 3000;
+}
+app.listen(port, function() {
+  console.log("Server started Successfully");
 });

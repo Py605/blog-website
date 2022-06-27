@@ -1,11 +1,10 @@
-
 const express = require("express");
 const _ = require("lodash");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-const homeStartingContent ="Hey Guys & Girls, This is my First Blog Website. You can also make a new Post by going on Compose Post";
-const aboutContent = "This is the version 2.0 of my Blog-Website, you can add your thoughts too in the form of a Blog. This will have more features in future... So, Till then enjoy this version...";
+const homeStartingContent ="Hey Guys & Girls, This is my First Blog Website. You can also make a new Post by going on Compose Post.";
+const aboutContent = "We are pre-final year students of DIET,Shyampur. This is our Blog-Website for College's Minor Project, you can add your thoughts too in the form of a Blog. This will have more features in future... So, Till then enjoy this version... Anyone can write on MyBlogWebsite. Whether you’ve never written before or are ready to create a full publication, it’s easy to get started and we allow you to focus more on big ideas and less on driving clicks.";
 const contactContent = "Mail id:- pryanshubharti9412@gmail.com";
 
 mongoose.connect("mongodb+srv://admin-py:pypriyanshu@cluster0.x67qb.mongodb.net/blogwebsiteDB",{useNewUrlParser : true});
@@ -21,7 +20,7 @@ let posts = [];
 const app = express();
 
 app.set('view engine', 'ejs');
-
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
@@ -41,9 +40,10 @@ app.get('/about', function(req, res){
 })
 
 app.get('/contact', function(req, res){
-  res.render('contact',{
-    contactDetails : contactContent
-  });
+  // res.render('contact',{
+  //   contactDetails : contactContent
+  // });
+  res.sendFile(__dirname+'/contact.html')
 })
 
 app.get('/compose', function(req,res){

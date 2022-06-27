@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 /node_modules
 npm-debug.log
 .DS_Store
+=======
+/node_modules
+npm-debug.log
+.DS_Store
+>>>>>>> 6e5ef5e44f8d31fbdf089bc36d5063d1f52f0502
 /*.env

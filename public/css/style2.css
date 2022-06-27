@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
   margin: 0;
   padding: 0;
@@ -60,3 +61,67 @@ textarea.contact-form-text{
 .contact-form-btn:hover{
   background: #2980b9;
 }
+=======
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+}
+.contact-section{
+  /* background: url(bg.png) no-repeat center; */
+  
+  background-size: cover;
+  padding: 10px 0;
+}
+.contact-section h2{
+  text-align: center;
+  color: rgb(9, 5, 5);
+}
+.border{
+  width: 100px;
+  height: 10px;
+  background: #0c0e10;
+  margin: 10px auto;
+}
+
+.contact-form{
+  max-width: 400px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+  background-color: rgb(160, 179, 179);
+}
+
+.contact-form-text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  
+  padding: 20px 40px;
+  outline: none;
+  color: rgb(10, 10, 10);
+  transition: 0.5s;
+}
+.contact-form-text:focus{
+  box-shadow: 0 0 10px 4px #34495e;
+}
+textarea.contact-form-text{
+  resize: none;
+  height: 100px;
+}
+.contact-form-btn{
+  float: right;
+  border: 0;
+  background: #34495e;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.contact-form-btn:hover{
+  background: #2980b9;
+}
+>>>>>>> 6e5ef5e44f8d31fbdf089bc36d5063d1f52f0502

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 6e5ef5e44f8d31fbdf089bc36d5063d1f52f0502
 const express = require("express");
 const _ = require("lodash");
 const bodyParser = require("body-parser");

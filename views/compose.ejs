@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Document</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   <%- include('partials/header'); -%>
-  <link rel="stylesheet" href="/css/styles2.css">
-</head>
-<body>
+
   <div class="mid-container">
     <h1>Compose</h1>
     <form action="/compose" method="POST">
       <div class="form-group"></div>
       <label>Title</label>
-      
+      <br>
       <input class="form-control" type="text" name="postTitle">
-     
+     <br>
       <label>Post</label>
+      <br>
       <textarea class="form-control" rows="5" cols="30" name="post"></textarea>
       <br>
       <button type="submit" name="button" class="btn btn-primary ">Publish</button>
@@ -24,6 +19,5 @@
     </form>
   </div>
   
-</body>
   <%- include('partials/footer'); -%>
-</html>
+

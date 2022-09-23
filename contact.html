@@ -1,21 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MyBlogWebsite</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  
   <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/style2.css">
 </head>
-  <nav class="navbar ">
+<body>
+  
+  <nav class="navbar">
     <div class="container">
       <div class="navbar-header">
-        <p class="website-text">MyBlogWebsite</p>
+        <p class="website-text">BlogWebsite</p>
       </div>
-        <ul class="navbar-nav ">
+      <ul class="navbar-nav ">
           <div class="li-container">
             <li class = "navigation-panel" id="home"><a href="/">HOME</a></li>
             <li class = "navigation-panel" id="about"><a href="/about">ABOUT US</a></li>
@@ -23,29 +24,35 @@
             <li class = "navigation-panel" id="compose"><a href="/compose">COMPOSE POST</a></li>
           </div>
           
-        </ul>
+      </ul>
     </div>
   </nav>
-
-<h1 style="margin-left: 13%;">Contact</h1>
-
-<h4 style="margin-left: 13%;">Mail id : pryanshubharti9412@gmail.com</h4>
-
-  <div class="contact-section">
-    <h2>Message Us</h2>
-    <div class="border"></div>
-    <form class="contact-form" action="/contact.html" method="POST">
-      <input type="text" class="contact-form-text" placeholder="Your name">
-      <input type="email" class="contact-form-text" placeholder="Your email">
-      <input type="text" class="contact-form-text" placeholder="Your phone">
-      <textarea class="contact-form-text" placeholder="Your message"></textarea>
-      <input type="submit" class="contact-form-btn" value="Send">
-    </form>
+  <div class="mid-container">
+    <div class="outer-div">
+      <div class="contact">
+        <h1 >Contact</h1>
+            <h4 >Mail id : pryanshubharti9412@gmail.com</h4>
+      </div>
+      <div class="contact-section">
+          <h2>Message Us</h2>
+          <div class="border"></div>
+          <form class="contact-form" action="/contact.html" method="POST">
+            <input type="text" class="contact-form-text" placeholder="Your name" required>
+            <input type="email" class="contact-form-text" placeholder="Your email" required>
+            <input type="text" class="contact-form-text" placeholder="Your phone" required>
+            <textarea class="contact-form-text" placeholder="Your message" required></textarea>
+            <input type="submit" class="contact-form-btn" value="Send">
+          </form>
+      </div>
+    </div>
   </div>
 
-  <!-- <div class="footer-padding"></div> -->
-  <div class="footer">
-    <p>@ 2022 All rights reserved.</p>
-  </div>
+    <div class="footer-padding">
+      <div class="footer">
+        <p>@ 2022 All rights reserved.</p>
+      </div>
+    </div>
+
+</body>
 
   

@@ -1,7 +1,7 @@
 {
   "name": "ejs-challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is my First Blog Website. You can check it out here:-https://serene-bastion-00801.herokuapp.com/ <br> Here is the Preview:- ![nothing](https://user-images.githubusercontent.com/67111661/153899354-643c652b-96c9-4af8-979e-edde980030ab.png)",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,10 +12,10 @@
     "node": "16.13.1"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "ejs": "^2.6.1",
-    "express": "^4.16.3",
+    "body-parser": "^1.20.0",
+    "ejs": "^2.7.4",
+    "express": "^4.18.1",
     "lodash": "^4.17.21",
-    "mongoose": "^6.2.1"
+    "mongoose": "^6.6.1"
   }
 }

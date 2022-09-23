@@ -3,24 +3,27 @@
 <head>
   <title>Document</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" href="/css/styles.css"> -->
   <%- include('partials/header'); -%>
+  <link rel="stylesheet" href="/css/styles2.css">
 </head>
 <body>
-  <h1>Compose</h1>
-  <form action="/compose" method="POST">
-    <div class="form-group"></div>
-    <label>Title</label>
-    
-    <input class="form-control" type="text" name="postTitle">
+  <div class="mid-container">
+    <h1>Compose</h1>
+    <form action="/compose" method="POST">
+      <div class="form-group"></div>
+      <label>Title</label>
+      
+      <input class="form-control" type="text" name="postTitle">
+     
+      <label>Post</label>
+      <textarea class="form-control" rows="5" cols="30" name="post"></textarea>
+      <br>
+      <button type="submit" name="button" class="btn btn-primary ">Publish</button>
+    </div>
    
-    <label>Post</label>
-    <textarea class="form-control" rows="5" cols="30" name="post"></textarea>
-    <br>
-    <button type="submit" name="button" class="btn btn-primary ">Publish</button>
+    </form>
   </div>
- 
-  </form>
+  
 </body>
   <%- include('partials/footer'); -%>
 </html>

@@ -4,6 +4,9 @@
   padding: 0;
   font-family: "montserrat",sans-serif;
 }
+body{
+  background-color:beige;
+}
 .contact-section{
   padding: 10px 0;
 }
@@ -58,12 +61,21 @@ textarea.contact-form-text{
 .contact-form-btn:hover{
   background: #2980b9;
 }
+form .form-control{
+  background-color: red;
+}
 .footer {
   position: sticky;
   /* position: absolute; */
   bottom: 0;
-text-align: center;
-width: 100%;
-height: 60px;
-background-color: #1abc9c;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  background-color: #1abc9c;
+}
+.navigation-panel {
+  color: black;
+}
+.form-control{
+  background-color: #0c0e10 ;
 }

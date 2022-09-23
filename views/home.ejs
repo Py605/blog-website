@@ -1,16 +1,18 @@
 
 <%- include('partials/header'); -%>
+<div class="mid-container">
 
-<h1>Home</h1>
-<h4 style="margin-bottom:40px;">
-<%= startingContent %></h4>
+  <h1>Home</h1>
+  <h4 style="margin-bottom:40px;">
+  <%= startingContent %></h4>
 
-<% posts.forEach(function(post){ %>
-  <h1> <%= post.title %></h1> 
-<h4> <%= post.content.substring(0, 100) +"..." %></h4>
-<a href="/posts/<%=post.title%>">Read More</a>
-</p> 
-<% }) %>
+  <% posts.forEach(function(post){ %>
+    <h1> <%= post.title %></h1> 
+  <h4> <%= post.content.substring(0, 150) +"..." %></h4>
+  <a href="/posts/<%=post.title%>">Read More</a>
+  </p> 
+  <% }) %>
+</div>
 
 
 <%- include('partials/footer'); -%>

@@ -4,13 +4,12 @@
   "description": "This is my First Blog Website. You can check it out here:-https://serene-bastion-00801.herokuapp.com/ <br> Here is the Preview:- ![nothing](https://user-images.githubusercontent.com/67111661/153899354-643c652b-96c9-4af8-979e-edde980030ab.png)",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "14.x"
+    "node": "16.13.1"
   },
   "dependencies": {
     "body-parser": "^1.20.0",
